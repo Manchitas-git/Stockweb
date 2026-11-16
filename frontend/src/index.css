@@ -1,0 +1,97 @@
+body {
+  background-color: #f1f3f6;
+}
+
+/* Barra de navegacion azul como en el diseño del avance */
+.barra {
+  background-color: #1f3a5f;
+}
+
+.marca {
+  color: #f5a623;
+}
+
+.barra .nav-link.active {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  color: #fff;
+}
+
+.tarjeta {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Tarjetas de los indicadores del inicio */
+.indicador {
+  border-left: 4px solid #1f3a5f;
+}
+
+.indicador.alerta {
+  border-left-color: #dc3545;
+}
+
+.indicador h2 {
+  font-weight: bold;
+  margin: 0;
+}
+
+.btn-primario {
+  background-color: #1f3a5f;
+  color: #fff;
+}
+
+.btn-primario:hover {
+  background-color: #2c5282;
+  color: #fff;
+}
+
+.btn-outline-primario {
+  border: 1px solid #1f3a5f;
+  color: #1f3a5f;
+}
+
+.btn-outline-primario:hover {
+  background-color: #1f3a5f;
+  color: #fff;
+}
+
+/* Etiquetas del codigo de barras */
+.hoja-etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.etiqueta {
+  background: #fff;
+  border: 1px dashed #999;
+  padding: 8px;
+  text-align: center;
+  width: 230px;
+}
+
+.etiqueta svg {
+  max-width: 100%;
+}
+
+/* Al imprimir solo salen las etiquetas */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  main.container {
+    max-width: 100%;
+    padding: 0 !important;
+  }
+
+  .etiqueta {
+    page-break-inside: avoid;
+  }
+}
